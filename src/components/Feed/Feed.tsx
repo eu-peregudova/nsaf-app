@@ -19,19 +19,20 @@ function Feed({ articles, input, source, setArticles, page, setPage } :
   return (
     <>
       <div>
-        {articles &&
+        {articles[0] ?
           articles.map((article, id) => {
             return <ArticleCard key={id} article={article} />
           })
+          : <h1>No articles matching this request</h1>
         }
       </div>
-      <button
+      {articles[0] && <button
         onClick={() => {
           setPage(page + 1)
           fetchData(input, source, page, setArticles, setLoading)
           console.log(articles)
         }}
-      >{loading ? `loading...` : `Load more`}</button>
+      >{loading ? `loading...` : `Load more`}</button>}
     </>
   );
 }
