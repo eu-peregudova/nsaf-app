@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react';
 import {SetArticle, SetSource} from "./SetTypes";
 import fetchData from "./fetchData";
 
-function Sources( { setSource, setArticles, source, input } :
-                    { setSource: SetSource, setArticles: SetArticle, source: string, input: string}) {
+function Sources( { setSource, setArticles, input } :
+                    { setSource: SetSource, setArticles: SetArticle, input: string}) {
   const [sourceList, setSourceList] = useState([{
     name: 'No sources',
     id: ''
@@ -45,6 +45,7 @@ function Sources( { setSource, setArticles, source, input } :
           )
         }
       </select>
+      {loading && <p>LOADING...</p>}
     </div>
   );
 }
