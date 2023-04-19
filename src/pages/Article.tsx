@@ -13,7 +13,7 @@ function Article() {
     <>
       <Header/>
       {article ? <>
-        <img src={article.urlToImage}/>
+        <img src={article.urlToImage || `https://placehold.co/600x400?text=${article.source.name}`}/>
         <p>{article.title}</p>
         <p>Author: {article.author}</p>
         <p>Source: {article.source.name}</p>
