@@ -1,12 +1,14 @@
 import React, {useEffect, useState} from 'react';
-import {SetSource} from "./SetTypes";
+import {SetArticle, SetSource} from "./SetTypes";
 import fetchData from "./fetchData";
 
-function Sources( { setSource }: {setSource: SetSource} ) {
+function Sources( { setSource, setArticles, source, input } :
+                    { setSource: SetSource, setArticles: SetArticle, source: string, input: string}) {
   const [sourceList, setSourceList] = useState([{
     name: 'No sources',
     id: ''
   }])
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const getSources = () => {
@@ -32,6 +34,7 @@ function Sources( { setSource }: {setSource: SetSource} ) {
         defaultValue={'no'}
         onChange={(event) => {
           setSource(event.target.value)
+          fetchData(input, event.target.value, 1, setArticles, setLoading)
         }
       }
       >
