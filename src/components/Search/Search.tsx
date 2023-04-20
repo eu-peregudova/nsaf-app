@@ -19,7 +19,7 @@ function Search({ setArticles, source, input, setInput, setPage } :
           type="button"
           value="SEARCH"
           onClick={() => {
-            fetchData(input, source, 1, setArticles, setLoading)
+            fetchData(input, source, setArticles, setLoading)
             setPage(2)
           }
         }

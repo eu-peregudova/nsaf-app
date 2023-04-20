@@ -34,7 +34,7 @@ function Sources( { setSource, setArticles, input } :
         defaultValue={'no'}
         onChange={(event) => {
           setSource(event.target.value)
-          fetchData(input, event.target.value, 1, setArticles, setLoading)
+          fetchData(input, event.target.value, setArticles, setLoading)
         }
       }
       >
