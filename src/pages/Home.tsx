@@ -13,12 +13,12 @@ function Home() {
   const [page, setPage] = useState(2)
 
   return (
-    <>
+    <div className="max-w-2xl m-auto">
       <Header />
       <Search setArticles={setArticles} source={source} input={input} setInput={setInput} setPage={setPage}/>
       <Sources setSource={setSource} setArticles={setArticles} input={input}/>
       <Feed articles={articles} input={input} source={source} setArticles={setArticles} />
-    </>
+    </div>
   )
 }
 

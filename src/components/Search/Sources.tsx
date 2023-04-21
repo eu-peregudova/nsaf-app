@@ -30,7 +30,9 @@ function Sources( { setSource, setArticles, input } :
 
   return (
     <div>
+      <p>Filter news by source:</p>
       <select
+        className="text-violet-500 w-full border-2 border-gray-200 hover:border-gray-300 focus:outline-none font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
         defaultValue={'no'}
         onChange={(event) => {
           setSource(event.target.value)

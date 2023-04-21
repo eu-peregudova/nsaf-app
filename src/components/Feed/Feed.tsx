@@ -30,7 +30,7 @@ function Feed({ articles, input, source, setArticles } :
 
   return (
     <>
-      <div>
+      <div className="grid grid-cols-2 gap-3 items-top justify-center max-w-2xl mt-4">
         {articles[0] ?
           articlesToShow.map((article, id) => {
             return <ArticleCard key={id} article={article} />
@@ -38,13 +38,16 @@ function Feed({ articles, input, source, setArticles } :
           : <h1>No articles matching this request</h1>
         }
       </div>
-      {articles[0] && loadMoreNumber < Math.ceil(articles.length / 20) && <button
-        onClick={() => {
-          setLoadMoreNumber(loadMoreNumber + 1)
-          fetchData(input, source, setArticles, setLoading)
-          console.log(articles)
-        }}
-      >{loading ? `loading...` : `Load more`}</button>}
+      <div className="flex justify-center items-center m-4">
+        {articles[0] && loadMoreNumber < Math.ceil(articles.length / 20) && <button
+          className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700"
+          onClick={() => {
+            setLoadMoreNumber(loadMoreNumber + 1)
+            fetchData(input, source, setArticles, setLoading)
+            console.log(articles)
+          }}
+        >{loading ? `loading...` : `Load more`}</button>}
+      </div>
     </>
   );
 }
