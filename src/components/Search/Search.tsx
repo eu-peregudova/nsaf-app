@@ -1,6 +1,7 @@
 import fetchData from "../../commonUse/functions/fetchData"
 import {useState} from "react";
 import {SetArticle, SetInput, SetPage} from "../../commonUse/types/SetTypes";
+import Loader from "../Loader/Loader";
 
 function Search({ setArticles, source, input, setInput, setPage } :
                   { setArticles: SetArticle, source: string, input: string, setInput: SetInput, setPage: SetPage}) {
@@ -34,7 +35,7 @@ function Search({ setArticles, source, input, setInput, setPage } :
             />
         </div>
       </form>
-      {loading && <p>Loading...</p>}
+      {loading && <Loader />}
     </>
   );
 }

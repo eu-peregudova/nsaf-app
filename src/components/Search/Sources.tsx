@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {SetArticle, SetSource} from "../../commonUse/types/SetTypes";
 import fetchData from "../../commonUse/functions/fetchData";
+import Loader from "../Loader/Loader";
 
 function Sources( { setSource, setArticles, input } :
                     { setSource: SetSource, setArticles: SetArticle, input: string}) {
@@ -51,7 +52,7 @@ function Sources( { setSource, setArticles, input } :
           )
         }
       </select>
-      {loading && <p>LOADING...</p>}
+      {loading && <Loader />}
     </div>
   );
 }
