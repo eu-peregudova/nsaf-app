@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Header} from "../components/Header/Header";
-import {iArticle} from "../components/Feed/iArticle";
+import {iArticle} from "../commonUse/types/iArticle";
 import Search from "../components/Search/Search";
 import Sources from "../components/Search/Sources";
 import Feed from "../components/Feed/Feed";

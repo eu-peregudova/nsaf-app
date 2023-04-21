@@ -1,4 +1,4 @@
-import {SetArticle, SetLoader} from "./SetTypes";
+import {SetArticle, SetLoader} from "../types/SetTypes";
 
 export default function fetchData(value: string, source = 'no', setter: SetArticle, loader: SetLoader) {
   loader(true)

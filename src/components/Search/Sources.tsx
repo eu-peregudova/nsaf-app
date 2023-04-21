@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import {SetArticle, SetSource} from "./SetTypes";
-import fetchData from "./fetchData";
+import {SetArticle, SetSource} from "../../commonUse/types/SetTypes";
+import fetchData from "../../commonUse/functions/fetchData";
 
 function Sources( { setSource, setArticles, input } :
                     { setSource: SetSource, setArticles: SetArticle, input: string}) {

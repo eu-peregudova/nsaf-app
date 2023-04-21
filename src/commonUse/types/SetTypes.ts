@@ -1,4 +1,4 @@
-import {iArticle} from "../Feed/iArticle";
+import {iArticle} from "./iArticle";
 
 type SetArticle = (value: (((prevState: iArticle[]) => iArticle[]) | iArticle[])) => void
 type SetInput = (value: (((prevState: string) => string) | string)) => void

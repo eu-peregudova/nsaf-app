@@ -1,15 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import ArticleCard from "./ArticleCard";
-import {iArticle} from "./iArticle";
-import fetchData from "../Search/fetchData";
-import {SetArticle} from "../Search/SetTypes";
+import {iArticle} from "../../commonUse/types/iArticle";
+import fetchData from "../../commonUse/functions/fetchData";
+import {SetArticle} from "../../commonUse/types/SetTypes";
 
 function Feed({ articles, input, source, setArticles } :
                 {articles: iArticle[], input: string, source: string, setArticles: SetArticle} ) {
 
   const [loading, setLoading] = useState(false);
   const [loadMoreNumber, setLoadMoreNumber] = useState(1);
-  const articlesToShow = []
+  const articlesToShow: iArticle[] = []
 
   useEffect(() => {
     return () => {
