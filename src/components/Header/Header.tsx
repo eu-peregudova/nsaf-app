@@ -6,7 +6,7 @@ export function Header() {
 
   return (
     <nav className="flex flex-row justify-between my-4">
-      <Link className="text-emerald-800 font-black uppercase text-2xl"
+      <Link className="text-violet-800 font-black uppercase text-2xl"
             to="/" title="Home page">news-app</Link>
       {pathname === '/' || pathname === '/home' ? <></> :
         <Link className="font-normal hover:underline hover:cursor-pointer"

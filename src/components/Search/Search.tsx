@@ -9,26 +9,11 @@ function Search({ setArticles, source, input, setInput, setPage } :
 
   return (
     <>
-      {/*<div>*/}
-      {/*  /!*<input*!/*/}
-      {/*  /!*  placeholder="type to search"*!/*/}
-      {/*  /!*  value={input}*!/*/}
-      {/*  /!*  maxLength={500}*!/*/}
-      {/*  /!*  onChange={(e) => setInput(e.target.value)}*!/*/}
-      {/*  /!*  className="rounded-md border-2 border-gray-800 pl-1"*!/*/}
-
-      {/*  /!*<input*!/*/}
-      {/*  /!*  type="button"*!/*/}
-      {/*  /!*  value="SEARCH"*!/*/}
-      {/*  /!*  onClick={() => {*!/*/}
-      {/*  /!*    fetchData(input, source, setArticles, setLoading)*!/*/}
-      {/*  /!*    setPage(2)*!/*/}
-      {/*  /!*  }}*!/*/}
-      {/*  /!*  className="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"*!/*/}
-
-
-      {/*</div>*/}
-      <form>
+      <form onSubmit={(e) => {
+        e.preventDefault()
+        fetchData(input, source, setArticles, setLoading)
+        setPage(2)
+      }}>
         <label htmlFor="search"
                className="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
         <div className="relative">

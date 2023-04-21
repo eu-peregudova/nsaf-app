@@ -30,7 +30,7 @@ function Feed({ articles, input, source, setArticles } :
 
   return (
     <>
-      <div className="grid grid-cols-2 gap-3 items-top justify-center max-w-2xl mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 items-top justify-center max-w-2xl mt-4">
         {articles[0] ?
           articlesToShow.map((article, id) => {
             return <ArticleCard key={id} article={article} />

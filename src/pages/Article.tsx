@@ -12,7 +12,8 @@ function Article() {
   const article = decodeArticle(id)
 
   return (
-    <div className="max-w-2xl m-auto">
+    <div className="max-w-2xl m-auto h-screen flex flex-col">
+      <div className="flex-grow flex-shrink-0 basis-auto">
       <Header/>
       {article ?
         <main className="max-w-2xl m-auto mx-4">
@@ -40,6 +41,7 @@ function Article() {
           <h2>Article you trying to reach don't exist here, please go to</h2>
           <a href="/">home page</a>
         </>}
+      </div>
       <Footer />
     </div>
   );
