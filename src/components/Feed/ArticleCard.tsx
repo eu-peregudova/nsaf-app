@@ -7,7 +7,9 @@ function ArticleCard({ article } : { article: iArticle }) {
 
   return (
     <div>
-      <img style={{height: 100 + 'px'}} src={article.urlToImage || `https://placehold.co/600x400?text=${article.source.name}`}></img>
+      <img style={{height: 100 + 'px'}} src={article.urlToImage || `https://placehold.co/600x400?text=${article.source.name}`}
+           onError={() => `https://placehold.co/600x400?text=${article.source.name}`}>
+      </img>
       <h2>{article.title}</h2>
       <p>{article.source.name}</p>
       <p>{article.publishedAt}</p>

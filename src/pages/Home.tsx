@@ -17,7 +17,7 @@ function Home() {
       <Header />
       <Search setArticles={setArticles} source={source} input={input} setInput={setInput} setPage={setPage}/>
       <Sources setSource={setSource} setArticles={setArticles} input={input}/>
-      <Feed articles={articles} input={input} source={source} setArticles={setArticles} page={page} setPage={setPage} />
+      <Feed articles={articles} input={input} source={source} setArticles={setArticles} />
     </>
   )
 }

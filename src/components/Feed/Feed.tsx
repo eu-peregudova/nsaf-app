@@ -18,10 +18,11 @@ function Feed({ articles, input, source, setArticles } :
     };
   }, []);
 
-
   function getNumberOfArticles() {
     for (let i = 0; i < loadMoreNumber * 20; i += 1) {
-      articlesToShow.push(articles[i])
+      if (articles[i]) {
+        articlesToShow.push(articles[i])
+      }
     }
   }
 

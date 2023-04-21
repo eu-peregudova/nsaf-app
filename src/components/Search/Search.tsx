@@ -13,6 +13,7 @@ function Search({ setArticles, source, input, setInput, setPage } :
         <input
           placeholder="type to search"
           value={input}
+          maxLength="500"
           onChange={(e) => setInput(e.target.value)}
         />
         <input
