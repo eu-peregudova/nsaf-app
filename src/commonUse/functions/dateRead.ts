@@ -9,10 +9,11 @@ export default function dateRead(dateUTC: string): DateObject {
     'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
   const minutes = utc.getMinutes() < 10 ? `0${utc.getMinutes()}` : `${utc.getMinutes()}`
+  const hours = utc.getHours() < 10 ? `0${utc.getHours()}` : `${utc.getHours()}`
 
   return {
     date: `${months[utc.getMonth()]} ${utc.getDate()}, ${utc.getFullYear()}`,
-    time: `${utc.getHours()}:${minutes}`
+    time: `${hours}:${minutes}`
   }
 }
 
