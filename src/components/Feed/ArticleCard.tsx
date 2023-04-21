@@ -1,7 +1,7 @@
 import React from 'react';
 import {iArticle} from "../../commonUse/types/iArticle";
 import {Link} from "react-router-dom";
-import {encodeArticle} from "../Article/URLencoder";
+import {encodeArticle} from "../../commonUse/functions/URLencoder";
 import dateRead from "../../commonUse/functions/dateRead";
 
 function ArticleCard({ article } : { article: iArticle }) {

@@ -1,4 +1,4 @@
-import {iArticle} from "../../commonUse/types/iArticle";
+import {iArticle} from "../types/iArticle";
 
 function encodeArticle(article: iArticle) {
   return encodeURIComponent(JSON.stringify(article))

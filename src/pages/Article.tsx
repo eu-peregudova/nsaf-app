@@ -1,7 +1,7 @@
 import React from 'react';
 import {Header} from "../components/Header/Header";
 import {useParams} from "react-router-dom";
-import {decodeArticle} from "../components/Article/URLencoder";
+import {decodeArticle} from "../commonUse/functions/URLencoder";
 import dateRead from "../commonUse/functions/dateRead";
 import Footer from "../components/Footer/Footer";
 
