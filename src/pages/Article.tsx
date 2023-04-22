@@ -19,12 +19,23 @@ function Article() {
         <main className="max-w-2xl m-auto mx-4">
           <div className="">
             <img className="h-auto rounded-lg"
-                 src={article.urlToImage || `https://placehold.co/600x400?text=${article.source.name}`}/>
+                 src={article.urlToImage || `https://placehold.co/600x400?text=${article.source.name}`}
+                 onError={({ currentTarget }) => {
+                   if (article.source.name) {
+                       currentTarget.src = `https://placehold.co/600x200?text=${article.source.name}`
+                   } else {
+                    currentTarget.src = `https://placehold.co/600x200?text=News-app`
+                   }
+                 }}/>
             <h2 className="text-2xl font-extrabold">{article.title}</h2>
             <div className="my-5 flex justify-between">
               <div>
-                <p>Author: {article.author}</p>
-                <p>Source: {article.source.name}</p>
+                <p className="text-gray-500 italic">
+                  Author: {article.author ? article.author : 'unknown'}
+                </p>
+                <p className="text-gray-500 italic">
+                  Source: {article.source.name ? article.source.name : 'unknown'}
+                </p>
               </div>
               <div>
                 <p className="text-right text-gray-500 italic">{dateRead(article.publishedAt).date}</p>

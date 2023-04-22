@@ -11,7 +11,11 @@ function ArticleCard({ article } : { article: iArticle }) {
       <img className="rounded-t-lg max-w-full h-auto"
            src={article.urlToImage || `https://placehold.co/600x400?text=${article.source.name}`}
            onError={({ currentTarget }) => {
-             currentTarget.src=`https://placehold.co/600x400?text=${article.source.name}`;
+             if (article.source.name) {
+              currentTarget.src=`https://placehold.co/600x400?text=${article.source.name}`
+             } else {
+               currentTarget.src=`https://placehold.co/600x400?text=News-app`
+             }
            }}>
       </img>
       <div className="max-h-min p-4 flex flex-col justify-between">
