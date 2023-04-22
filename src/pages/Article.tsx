@@ -13,10 +13,10 @@ function Article() {
 
   return (
     <div className="max-w-2xl m-auto h-screen flex flex-col">
-      <div className="flex-grow flex-shrink-0 basis-auto">
+      <div className="flex-grow flex-shrink-0 basis-auto mx-4">
       <Header/>
       {article ?
-        <main className="max-w-2xl m-auto mx-4">
+        <main className="max-w-2xl m-auto">
           <div className="">
             <img className="h-auto rounded-lg"
                  src={article.urlToImage || `https://placehold.co/600x400?text=${article.source.name}`}

@@ -12,7 +12,7 @@ function Footer() {
         </p>
         <p className="text-sm text-gray-500 text-center"
         >Made with <a
-          href="/"
+          href="https://newsapi.org/"
           className="hover:underline">NewsAPI</a></p>
       </div>
 

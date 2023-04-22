@@ -7,8 +7,8 @@ import dateRead from "../../commonUse/functions/dateRead";
 function ArticleCard({ article } : { article: iArticle }) {
 
   return (
-    <div className="h-max-fit max-w-md bg-white border border-gray-200 rounded-lg shadow grid grid-col-3 hover:bg-gray-100">
-      <img className="rounded-t-lg max-w-full h-auto"
+    <div className="h-max-fit max-w-full bg-white border border-gray-200 rounded-lg shadow grid grid-col-3 hover:bg-gray-100">
+      <img className="rounded-t-lg h-auto"
            src={article.urlToImage || `https://placehold.co/600x400?text=${article.source.name}`}
            onError={({ currentTarget }) => {
              if (article.source.name) {
@@ -18,7 +18,7 @@ function ArticleCard({ article } : { article: iArticle }) {
              }
            }}>
       </img>
-      <div className="max-h-min p-4 flex flex-col justify-between">
+      <div className="max-h-min max-w-full p-4 flex flex-col justify-between">
         <div>
           <h2 className="mb-2 text-xl font-bold tracking-tight text-gray-900">
             {article.title}

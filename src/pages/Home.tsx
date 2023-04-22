@@ -16,7 +16,7 @@ function Home() {
   return (
     <div className="md:max-w-2xl md:m-auto m-4 flex flex-col h-screen">
       <div className="flex-grow flex-shrink-0 basis-auto">
-      <Header />
+        <Header />
         <Search setArticles={setArticles} source={source} input={input} setInput={setInput} setPage={setPage}/>
         <Sources setSource={setSource} setArticles={setArticles} input={input}/>
         <Feed articles={articles} input={input} source={source} setArticles={setArticles} />

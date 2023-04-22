@@ -16,7 +16,7 @@ export default function fetchData(value: string, source = 'no', setter: SetArtic
   function defineLink() {
     let link = '';
     if (value !== '') {
-      link = `https://newsapi.org/v2/everything?q=${value}&sortBy=publishedAt&pageSize=100&searchIn=title`
+      link = `https://newsapi.org/v2/everything?q=${value}&language=en&sortBy=publishedAt&pageSize=100&searchIn=title`
     } else {
       link = `https://newsapi.org/v2/top-headlines?language=en&pageSize=100`
     }
