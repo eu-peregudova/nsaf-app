@@ -1,10 +1,15 @@
 import fetchData from "../../commonUse/functions/fetchData"
 import {useState} from "react";
-import {SetArticle, SetInput, SetPage} from "../../commonUse/types/SetTypes";
 import Loader from "../Loader/Loader";
+import {useAppDispatch, useAppSelector} from "../../hooks";
+import {setInput} from "./inputSlice";
+import {setArticles} from "../Feed/articlesSlice";
 
-function Search({ setArticles, source, input, setInput, setPage } :
-                  { setArticles: SetArticle, source: string, input: string, setInput: SetInput, setPage: SetPage}) {
+function Search() {
+
+  const source = useAppSelector((state) => state.source.value)
+  const input = useAppSelector((state) => state.input.value)
+  const dispatch = useAppDispatch()
 
   const [loading, setLoading] = useState(false);
 
@@ -12,8 +17,7 @@ function Search({ setArticles, source, input, setInput, setPage } :
     <>
       <form onSubmit={(e) => {
         e.preventDefault()
-        fetchData(input, source, setArticles, setLoading)
-        setPage(2)
+        fetchData(input, source, setLoading).then((data) => dispatch(setArticles(data)))
       }}>
         <label htmlFor="search"
                className="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
@@ -23,15 +27,14 @@ function Search({ setArticles, source, input, setInput, setPage } :
                  placeholder="Search news"
                  value={input}
                  maxLength={500}
-                 onChange={(e) => setInput(e.target.value)}
+                 onChange={(e) => dispatch(setInput(e.target.value))}
                  />
             <input type="button"
                    value="Search"
                    className="text-white absolute right-2.5 bottom-2.5 bg-violet-500 hover:bg-violet-700 hover:cursor-pointer focus:outline-none font-medium rounded-lg text-sm px-4 py-2"
-                   onClick={() => {
-                     fetchData(input, source, setArticles, setLoading)
-                     setPage(2)
-                   }}
+                   onClick={() =>
+                       fetchData(input, source, setLoading).then((data) => dispatch(setArticles(data)))
+                   }
             />
         </div>
       </form>

@@ -1,10 +1,14 @@
 import React, {useEffect, useState} from 'react';
-import {SetArticle, SetSource} from "../../commonUse/types/SetTypes";
 import fetchData from "../../commonUse/functions/fetchData";
 import Loader from "../Loader/Loader";
+import {setSource} from "./sourceSlice";
+import {useAppDispatch, useAppSelector} from "../../hooks";
+import {setArticles} from "../Feed/articlesSlice";
 
-function Sources( { setSource, setArticles, input } :
-                    { setSource: SetSource, setArticles: SetArticle, input: string}) {
+function Sources() {
+  const dispatch = useAppDispatch()
+  const input = useAppSelector((state) => state.input.value)
+
   const [sourceList, setSourceList] = useState([{
     name: 'No sources',
     id: ''
@@ -38,8 +42,9 @@ function Sources( { setSource, setArticles, input } :
         className="mt-2 font-bold text-violet-500 w-full border-2 border-gray-200 hover:border-gray-300 focus:outline-none font-medium rounded-lg text-sm px-4 py-1 text-left inline-flex items-center"
         defaultValue={'no'}
         onChange={(event) => {
-          setSource(event.target.value)
-          fetchData(input, event.target.value, setArticles, setLoading)
+          dispatch(setSource(event.target.value))
+
+          fetchData(input, event.target.value, setLoading).then((data) => dispatch(setArticles(data)))
         }
       }
       >
