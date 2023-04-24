@@ -23,7 +23,6 @@ function Feed() {
     return () => {
       fetchData(input, source, setLoading).then((data) => {
         dispatch(setArticles(data))
-        console.log('latest in Feed setted')
       }
       )
     };

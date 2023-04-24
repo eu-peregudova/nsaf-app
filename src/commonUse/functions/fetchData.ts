@@ -26,26 +26,15 @@ export default async function fetchData(value: string, source = 'no', loader: Se
         throw new Error(response.statusText)
       }
       const data = await response.json()
-      console.log(`articles fetched, search: ${value}, source: ${source}, page: no, link: ${defineLink()}`)
       return data.articles
     } catch (error) {
-      return {error}
+      console.log(error)
+      return new Promise(() => [])
     } finally {
       loader(false)
     }
   }
 
-  // .then((res) => res.json()).then(json => {
-  //   console.log(`articles fetched, search: ${value}, source: ${source}, page: no, link: ${defineLink()}`)
-  //   loader(false)
-  //   setter(json.articles)
-  // })
-  // .catch((e) => {
-  //   console.log(e, 'articles fetch fail')
-  //   loader(false)
-  // })
-
   return getData()
-
 }
 

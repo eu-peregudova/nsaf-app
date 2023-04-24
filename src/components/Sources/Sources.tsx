@@ -21,7 +21,6 @@ function Sources() {
       fetch(`https://newsapi.org/v2/top-headlines/sources?language=en&apiKey=4c32a79d7abc4e96bd76e397eb2297da`)
         .then((res) => res.json()).then(json => {
           setSourceList(json.sources)
-          console.log('sources request success')
       })
         .catch((e) => {
           console.log(e)
@@ -30,8 +29,6 @@ function Sources() {
     }
 
     getSources()
-
-    console.log('use effect')
   }, [])
 
   return (
