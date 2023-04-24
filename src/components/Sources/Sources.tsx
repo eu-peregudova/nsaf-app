@@ -43,7 +43,6 @@ function Sources() {
         defaultValue={'no'}
         onChange={(event) => {
           dispatch(setSource(event.target.value))
-
           fetchData(input, event.target.value, setLoading).then((data) => dispatch(setArticles(data)))
         }
       }

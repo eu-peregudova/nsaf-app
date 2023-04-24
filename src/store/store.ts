@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import sourceReducer from '../components/Search/sourceSlice'
+import sourceReducer from '../components/Sources/sourceSlice'
 import inputReducer from '../components/Search/inputSlice'
 import articlesReducer from '../components/Feed/articlesSlice'
 

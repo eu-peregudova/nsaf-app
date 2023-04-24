@@ -1,13 +1,13 @@
 export interface iArticle {
-  author: string
+  author: string | null
   content: string
   description: string
   publishedAt: string
   source: {
-    id: never,
+    id: string | null,
     name: string
   }
   title: string
   url: string
-  urlToImage: string
+  urlToImage: string | null
 }

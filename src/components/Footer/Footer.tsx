@@ -15,7 +15,6 @@ function Footer() {
           href="https://newsapi.org/"
           className="hover:underline">NewsAPI</a></p>
       </div>
-
     </footer>
   );
 }
