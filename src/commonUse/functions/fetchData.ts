@@ -3,19 +3,24 @@ import {iArticle} from "../types/iArticle";
 
 export default async function fetchData(value: string, source = 'no', loader: SetLoader): Promise<iArticle[] | []> {
   function defineLink() {
-    let link = '';
+    let finalLink: string;
+    const baseLink = `https://newsapi.org/v2/`
+    const lang = `en`
+    const pageSize = 100
+
     if (value !== '') {
-      link = `https://newsapi.org/v2/everything?q=${value}&language=en&sortBy=publishedAt&pageSize=100&searchIn=title`
+      finalLink = `${baseLink}everything?q=${value}&language=${lang}&pageSize=${pageSize}&sortBy=publishedAt&searchIn=title`
     } else {
-      link = `https://newsapi.org/v2/top-headlines?language=en&pageSize=100`
+      finalLink = `${baseLink}top-headlines?language=${lang}&pageSize=${pageSize}`
     }
 
     if (source !== 'no') {
-      link += `&sources=${source}`
+      finalLink += `&sources=${source}`
     }
 
-    // return link + `&apiKey=7705af18e3f24e069b4d57ab8b5a577a`
-    return link + `&apiKey=4c32a79d7abc4e96bd76e397eb2297da`
+    // in case API don't answer because there was too many requests, second key:
+    // 7705af18e3f24e069b4d57ab8b5a577a
+    return finalLink + `&apiKey=4c32a79d7abc4e96bd76e397eb2297da`
   }
 
   async function getData() {
