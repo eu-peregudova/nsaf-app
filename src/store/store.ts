@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit'
-import sourceReducer from '../components/Sources/sourceSlice'
-import inputReducer from '../components/Search/inputSlice'
-import articlesReducer from '../components/Feed/articlesSlice'
+import sourceReducer from 'components/Sources/sourceSlice'
+import inputReducer from 'components/Search/inputSlice'
+import articlesReducer from 'components/Feed/articlesSlice'
 
 export const store = configureStore({
   reducer: {

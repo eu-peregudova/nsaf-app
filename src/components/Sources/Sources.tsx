@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import fetchData from "../../commonUse/functions/fetchData";
-import Loader from "../Loader/Loader";
+import fetchData from "commonUse/functions/fetchData";
+import Loader from "components/Loader/Loader";
 import {setSource} from "./sourceSlice";
-import {useAppDispatch, useAppSelector} from "../../hooks";
-import {setArticles} from "../Feed/articlesSlice";
+import {useAppDispatch, useAppSelector} from "hooks";
+import {setArticles} from "components/Feed/articlesSlice";
 
 function Sources() {
   const dispatch = useAppDispatch()
@@ -17,7 +17,8 @@ function Sources() {
 
   useEffect(() => {
     const getSources = () => {
-      // fetch(`https://newsapi.org/v2/top-headlines/sources?language=en&apiKey=7705af18e3f24e069b4d57ab8b5a577a`)
+      // in case API don't answer because there was too many requests, second key:
+      // 7705af18e3f24e069b4d57ab8b5a577a
       fetch(`https://newsapi.org/v2/top-headlines/sources?language=en&apiKey=4c32a79d7abc4e96bd76e397eb2297da`)
         .then((res) => res.json()).then(json => {
           setSourceList(json.sources)

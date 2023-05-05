@@ -1,9 +1,9 @@
 import React from 'react';
-import {Header} from "../components/Header/Header";
+import {Header} from "components/Header/Header";
 import {useParams} from "react-router-dom";
-import {decodeArticle} from "../commonUse/functions/URLencoder";
-import dateRead from "../commonUse/functions/dateRead";
-import Footer from "../components/Footer/Footer";
+import {decodeArticle} from "commonUse/functions/URLencoder";
+import dateRead from "commonUse/functions/dateRead";
+import Footer from "components/Footer/Footer";
 
 
 function Article() {

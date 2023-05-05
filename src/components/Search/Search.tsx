@@ -1,9 +1,9 @@
-import fetchData from "../../commonUse/functions/fetchData"
+import fetchData from "commonUse/functions/fetchData"
 import {useState} from "react";
-import Loader from "../Loader/Loader";
-import {useAppDispatch, useAppSelector} from "../../hooks";
+import Loader from "components/Loader/Loader";
+import {useAppDispatch, useAppSelector} from "hooks";
 import {setInput} from "./inputSlice";
-import {setArticles} from "../Feed/articlesSlice";
+import {setArticles} from "components/Feed/articlesSlice";
 
 function Search() {
 

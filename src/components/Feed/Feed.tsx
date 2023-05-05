@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import ArticleCard from "./ArticleCard";
-import {iArticle} from "../../commonUse/types/iArticle";
-import fetchData from "../../commonUse/functions/fetchData";
-import Loader from "../Loader/Loader";
-import {useAppDispatch, useAppSelector} from "../../hooks";
+import {iArticle} from "commonUse/types/iArticle";
+import fetchData from "commonUse/functions/fetchData";
+import Loader from "components/Loader/Loader";
+import {useAppDispatch, useAppSelector} from "hooks";
 import {setArticles} from "./articlesSlice";
 
 function Feed() {

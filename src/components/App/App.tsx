@@ -1,8 +1,8 @@
 import React from 'react';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import Home from "../../pages/Home";
-import Article from "../../pages/Article";
-import NoPage from "../../pages/NoPage";
+import Home from "pages/Home";
+import Article from "pages/Article";
+import NoPage from "pages/NoPage";
 
 
 function App() {
