@@ -13,4 +13,4 @@ To run the project locally, you need clone this branch, install all dependencies
 run the project in development mode using `npm run start` command.
 
 # Screenshot
-<img src="https://imgur.com/a/Eel8mar" alt="Screenshot of web page, on the page is search bar and news cards">
+![image](https://github.com/eu-peregudova/news-app/assets/90528280/3e3741fe-8723-419f-bcba-140c9dc43556)
