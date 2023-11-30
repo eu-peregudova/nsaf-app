@@ -2,10 +2,14 @@ import {createSlice} from "@reduxjs/toolkit";
 import {iArticle} from "../../commonUse/types/iArticle";
 
 interface ArticlesState {
+  totalItems: number,
+  page: number,
   value: iArticle[] | []
 }
 
 const initialState: ArticlesState = {
+  totalItems: 0,
+  page: 1,
   value: []
 }
 
@@ -14,7 +18,9 @@ export const articlesSlice = createSlice({
   initialState,
   reducers: {
     setArticles: (state, action) => {
-      state.value = action.payload
+      state.value = action.payload.value
+      state.page = action.payload.page
+      state.totalItems = action.payload.total
     }
   }
 })

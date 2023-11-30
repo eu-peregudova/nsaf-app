@@ -5,16 +5,16 @@ import {encodeArticle} from "../../commonUse/functions/URLencoder";
 import dateRead from "../../commonUse/functions/dateRead";
 
 function ArticleCard({ article } : { article: iArticle }) {
-
   return (
     <div className="h-max-fit max-w-full bg-white border border-gray-200 rounded-lg shadow grid grid-col-3 hover:bg-gray-100">
       <img className="rounded-t-lg h-auto"
-           src={article.urlToImage || `https://placehold.co/600x400?text=${article.source.name}`}
+           src={article.images[0].original || `https://placehold.co/600x400?text=${article.title}`}
+           alt={article.title}
            onError={({ currentTarget }) => {
-             if (article.source.name) {
-              currentTarget.src=`https://placehold.co/600x400?text=${article.source.name}`
+             if (article.title) {
+              currentTarget.src=`https://placehold.co/600x400?text=${article.title}`
              } else {
-               currentTarget.src=`https://placehold.co/600x400?text=News-app`
+               currentTarget.src=`https://placehold.co/600x400?text="Stolen art file"`
              }
            }}>
       </img>
@@ -24,7 +24,7 @@ function ArticleCard({ article } : { article: iArticle }) {
             {article.title}
           </h2>
           <p className="mb-3 font-normal text-gray-700">
-            {article.source.name}
+            from {article.period}
           </p>
           <p className="mb-3 font-normal text-gray-700">
             {article.description}
@@ -32,10 +32,10 @@ function ArticleCard({ article } : { article: iArticle }) {
         </div>
         <div className="min-h-2">
           <p className="block mb-0 font-normal text-gray-500 italic">
-            {dateRead(article.publishedAt).date}
+            {dateRead(article.modified).date}
           </p>
           <p className="block font-normal text-gray-500 mt-0 mb-3 italic">
-            {dateRead(article.publishedAt).time}
+            {dateRead(article.modified).time}
           </p>
         </div>
         <Link

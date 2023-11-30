@@ -1,10 +1,8 @@
 import React from 'react';
 import {Header} from "../components/Header/Header";
 import Search from "../components/Search/Search";
-import Sources from "../components/Sources/Sources";
 import Feed from "../components/Feed/Feed";
 import Footer from "../components/Footer/Footer";
-import {ErrorBoundary} from "react-error-boundary";
 
 function Home() {
   return (
@@ -12,7 +10,6 @@ function Home() {
       <div className="flex-grow flex-shrink-0 basis-auto">
           <Header />
           <Search />
-          <Sources />
           <Feed />
       </div>
       <Footer />

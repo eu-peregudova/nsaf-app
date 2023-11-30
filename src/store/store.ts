@@ -1,13 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
-import sourceReducer from '../components/Sources/sourceSlice'
 import inputReducer from '../components/Search/inputSlice'
 import articlesReducer from '../components/Feed/articlesSlice'
+import pageReducer from '../store/pageSlice'
 
 export const store = configureStore({
   reducer: {
-    source: sourceReducer,
     input: inputReducer,
     articles: articlesReducer,
+    page: pageReducer
   },
 })
 
