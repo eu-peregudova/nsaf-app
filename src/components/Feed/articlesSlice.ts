@@ -1,5 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {iArticle} from "../../commonUse/types/iArticle";
+import {iArticle} from "commonUse/types/iArticle";
 
 interface ArticlesState {
   totalItems: number,
