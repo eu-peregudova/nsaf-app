@@ -11,10 +11,10 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route index element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/article/:id" element={<Article />} />
-          <Route path="*" element={<NoPage />} />
+          <Route path="/news-app" element={<Home />} />
+          <Route path="/news-app/home" element={<Home />} />
+          <Route path="/news-app/article/:id" element={<Article />} />
+          <Route path="/news-app/*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>
     </>
