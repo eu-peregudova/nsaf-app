@@ -1,3 +1,7 @@
+# Run
+To see the application [click here](https://eu-peregudova.github.io/news-app/)
+
+# About
 This is my little showcase-my-abilities project. 
 First, it was a simple page for news searching, powered by NewsAPI.
 This version could be found in `news` branch.
@@ -7,8 +11,7 @@ And as Frontend lover, I couldn't stand to not be able to deploy my project.
 
 So, I decided to find a new content to show here.
 
-And here it is: link
-
+# How it's done
 It's powered by [National Stolen Art File API](https://www.fbi.gov/investigate/violent-crime/art-crime). 
 You can search for stolen art by title or just browse them randomly. 
 Maybe, you'll find something interesting.
