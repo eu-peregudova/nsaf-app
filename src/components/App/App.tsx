@@ -11,10 +11,10 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/news-app" element={<Home />} />
-          <Route path="/news-app/home" element={<Home />} />
-          <Route path="/news-app/article/:id" element={<Article />} />
-          <Route path="/news-app/*" element={<NoPage />} />
+          <Route path="/nsaf-app" element={<Home />} />
+          <Route path="/nsaf-app/home" element={<Home />} />
+          <Route path="/nsaf-app/article/:id" element={<Article />} />
+          <Route path="/nsaf-app/*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>
     </>

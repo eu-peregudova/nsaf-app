@@ -17,7 +17,7 @@ function Article() {
       {article ?
         <main className="max-w-2xl m-auto flex flex-col">
           <Link className="font-normal hover:underline block self-end hover:cursor-pointer m-2"
-                  to="/news-app" title="Home page">Back to search page ↩️</Link>
+                  to="/nsaf-app" title="Home page">Back to search page ↩️</Link>
           <div className="">
             <h2 className="text-2xl font-extrabold">{article.title}</h2>
             <img className="h-auto rounded-lg w-full m-2"

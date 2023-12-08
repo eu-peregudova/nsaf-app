@@ -40,7 +40,7 @@ function ArticleCard({ article } : { article: iArticle }) {
         </div>
         <Link
           className="items-center px-3 py-2 text-sm font-medium text-center text-white bg-violet-700 rounded-lg hover:bg-violet-800 focus:ring-4 focus:outline-none"
-          to={`/news-app/article/${encodeArticle(article)}`}
+          to={`/nsaf-app/article/${encodeArticle(article)}`}
         >Read more
         </Link>
       </div>

@@ -11,7 +11,7 @@ function NoPage() {
         <div className="m-auto flex flex-col justify-center items-center">
           <h2 className="text-violet-700 font-black text-center uppercase text-5xl">404</h2>
           <p className="text-violet-700 font-black text-center uppercase m-3 text-2xl">This page doesn't exist, but you can<br /> return to</p>
-          <Link className="block bg-violet-500 text-white px-4 py-2 m-3 rounded-lg uppercase font-bold hover:bg-violet-700" to="/news-app">home page</Link>
+          <Link className="block bg-violet-500 text-white px-4 py-2 m-3 rounded-lg uppercase font-bold hover:bg-violet-700" to="/nsaf-app">home page</Link>
         </div>
       </main>
       <Footer />

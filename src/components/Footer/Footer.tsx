@@ -7,7 +7,7 @@ function Footer() {
         <hr className="mb-3 border-gray-200"/>
         <p className="text-sm text-gray-500 text-center"
         >2023 - <a
-          href="https://github.com/eu-peregudova/news-app"
+          href="https://github.com/eu-peregudova/nsaf-app"
           className="hover:underline">GitHub</a>
         </p>
         <p className="text-sm text-gray-500 text-center"

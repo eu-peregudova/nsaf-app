@@ -1,5 +1,5 @@
 # Run
-To see the application [click here](https://eu-peregudova.github.io/news-app/)
+To see the application [click here](https://eu-peregudova.github.io/nsaf-app/)
 
 # About
 This is my little showcase-my-abilities project. 
